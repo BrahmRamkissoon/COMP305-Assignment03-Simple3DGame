@@ -1,3 +1,7 @@
+// Filename: FirstPersonController.cs
+// Author: Brahm Ramkissoon
+// Created Date  (dd/mm/yyyy): 20/11/2015
+// Description: - Using scripts provided in Unity's Standard Assets and edits by Tom Tsiliopoulos
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
@@ -27,6 +31,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+
+        public Animator rifleAnimator;   // reference to Animator
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -206,6 +212,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
 
             bool waswalking = m_IsWalking;
+
+            // play aim animation when right mouse button is clicked and held++++++++++++++++++++++++++++++++++++++++++++
+            if (CrossPlatformInputManager.GetButton( "Fire2" ))
+            {
+                this.rifleAnimator.SetBool( "Aim", true );
+                }
+            else
+            {
+                this.rifleAnimator.SetBool( "Aim", false );
+            }
+           
+
 
 #if !MOBILE_INPUT
             // On standalone builds, walk/run speed is modified by a key press.

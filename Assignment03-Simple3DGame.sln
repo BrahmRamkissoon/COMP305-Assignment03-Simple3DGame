@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment03-Simple3DGame.CSharp.Plugins", "Assignment03-Simple3DGame.CSharp.Plugins.csproj", "{9EE4E3FE-74F4-B6A6-B080-324BC227E25F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment03-Simple3DGame.CSharp", "Assignment03-Simple3DGame.CSharp.csproj", "{8D772544-497F-6836-646E-AA414E73FB2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment03-Simple3DGame.CSharp.Editor", "Assignment03-Simple3DGame.CSharp.Editor.csproj", "{6BE4BC7A-E71E-ADCC-3149-D17AB74B1F5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EE4E3FE-74F4-B6A6-B080-324BC227E25F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE4E3FE-74F4-B6A6-B080-324BC227E25F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE4E3FE-74F4-B6A6-B080-324BC227E25F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE4E3FE-74F4-B6A6-B080-324BC227E25F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D772544-497F-6836-646E-AA414E73FB2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D772544-497F-6836-646E-AA414E73FB2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D772544-497F-6836-646E-AA414E73FB2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D772544-497F-6836-646E-AA414E73FB2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BE4BC7A-E71E-ADCC-3149-D17AB74B1F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE4BC7A-E71E-ADCC-3149-D17AB74B1F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE4BC7A-E71E-ADCC-3149-D17AB74B1F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BE4BC7A-E71E-ADCC-3149-D17AB74B1F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
