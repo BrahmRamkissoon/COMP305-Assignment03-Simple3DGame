@@ -17,6 +17,7 @@ public class PlayerShooting : MonoBehaviour
     public Animator rifleAnimator;
     public AudioSource bulletFireSound;
     public AudioSource bulletImpactSound;
+    public GameObject explosion;
 
 
     // PRIVATE INSTANCE VARIABLES
@@ -67,9 +68,17 @@ public class PlayerShooting : MonoBehaviour
             this._shooting = false;
             RaycastHit hit;
 
-            Debug.DrawRay( this._transform.position, this._transform.forward );
+            Debug.DrawRay( this._transform.position, this._transform.forward, Color.green );
             if (Physics.Raycast (this._transform.position, this._transform.forward, out hit, 50f))
             {
+                // whenever shots hit barrel, it explodes
+                if (hit.transform.CompareTag("Barrel"))
+                {
+                    Destroy( hit.transform.gameObject );
+                    Instantiate( this.explosion, hit.point, Quaternion.identity );
+                    this.explosion.transform.position = hit.point;
+                }
+
                 // show particle system at location of ray impact
                 this._impacts[this._currentImpact].transform.position = hit.point;
                 this._impacts[this._currentImpact].GetComponent<ParticleSystem>().Play();
